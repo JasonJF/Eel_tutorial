@@ -47,8 +47,31 @@
 </div>
 <script type="text/javascript" src="/eel.js"></script>
 <script type="text/javascript">
+ eel.expose(js_random);
+        function js_random() {
+            return Math.random();
+        }
 
+        function print_num(n) {
+            console.log(n);
+            var options = n;
+            console.log(options);
+            var select = document.getElementById("selectNumber");
+            //var options = ["Tektronix","Hittite","CXA"];
+            //var options = ["1","2","3"];
+            //console.log(options);
 
+            for(var i = 0; i < options.length; i++) {
+                var opt = options[i];
+                console.log(opt);
+                var el = document.createElement("option");
+                el.textContent = opt;
+                el.value = opt;
+                select.appendChild(el);
+            }
+        }
+eel.py_random()(print_num);
+eel.sendInst()(print_num);
 
 </script>
 </body>
