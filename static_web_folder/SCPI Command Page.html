@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCPI Command Debug</title>
+
+</head>
+<style>
+    div {
+    font-family: 'Mukta', sans-serif;}
+    #outerbox {
+    width: 450px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 5px 10px 8px #888888;
+    }
+    #responsebox {
+    border: 2px solid grey;
+    background-color: #3CE88D;
+    height: 150px;
+    width: 410px;
+    padding: 10px;
+    display: inline-block;
+    }
+</style>
+<script type="text/javascript">
+
+var myList =
+var select = document.getElementById("instruments");
+//var options = ["Tektronix","Hittite","CXA"];
+var options = ["1","2","3"];
+for(var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    select.appendChild(el);
+}
+
+</script>
+<body style="background-color: lightblue">
+<div id="outerbox">
+    <br>
+    <h1 style="font-size: 25px;">SCPI Command Debug</h1>
+<!--<div>Choose an Instrument:</div>-->
+<label for="instruments">Choose an instrument:</label>
+<select id="instruments">
+    <option>Choose a number</option>
+</select>
+<br><br>
+<!--<div>Enter Command:</div>-->
+    <form>
+        <label for="command">Enter Command:</label>
+        <input type="text" id="command" size="35">
+    </form>
+<br>
+    <div id="responsebox"></div>
+</div>
+</body>
+</html>
