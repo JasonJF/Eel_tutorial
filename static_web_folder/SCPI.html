@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<link href="../static/bootstrap.css.min" rel="stylesheet" />
+<link href="../bootstrap.css" rel="stylesheet" />
+<link href="../bootstrap-theme.css" rel="stylesheet" />
 <head>
     <meta charset="UTF-8">
     <title>SCPI Command Debug</title>
@@ -26,7 +29,7 @@
     display: inline-block;
     }
 </style>
-
+<script src="../bootstrap.min.js"></script>
 <body style="background-color: lightblue">
 <div id="outerbox">
     <br>
@@ -34,8 +37,9 @@
 <!--<div>Choose an Instrument:</div>-->
 <label for="selectNumber">Choose an instrument:</label>
 <select id="selectNumber">
-    <option>Choose a number</option>
+    <option>select instrument address</option>
 </select>
+    <button type="button" class="btn btn-primary">Get IDN</button>
 <br><br>
 <!--<div>Enter Command:</div>-->
     <form>
@@ -66,7 +70,7 @@
                 console.log(opt);
                 var el = document.createElement("option");
                 el.textContent = opt;
-                el.value = opt;
+                el.value = i;
                 select.appendChild(el);
             }
         }
