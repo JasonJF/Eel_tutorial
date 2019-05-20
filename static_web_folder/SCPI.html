@@ -88,6 +88,12 @@ function printResponse(pyResponse) {
 eel.py_random()(print_num);
 eel.sendInst()(print_num);
 
+eel.expose(sendDropDown);
+function sendDropDown() {
+    var e = document.getElementById("selectNumber");
+    var selectedInstAddr = e.options[e.selectedIndex].text;
+    return selectedInstAddr
+    }
 
 
 </script>
