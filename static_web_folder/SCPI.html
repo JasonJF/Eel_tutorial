@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <link href="../static/bootstrap.css.min" rel="stylesheet" />
-<link href="../bootstrap.css" rel="stylesheet" />
-<link href="../bootstrap-theme.css" rel="stylesheet" />
+<link href="../static/bootstrap.css" rel="stylesheet" />
+<link href="../static/bootstrap-theme.css" rel="stylesheet" />
 <head>
     <meta charset="UTF-8">
     <title>SCPI Command Debug</title>
@@ -12,9 +12,11 @@
     div {
     font-family: 'Mukta', sans-serif;}
     #outerbox {
+
     width: 450px;
-    height: 400px;
-    margin: 0 auto;
+    height: 450px;
+    margin: 10px auto;
+    padding: 5px;
     background-color: white;
     text-align: center;
     border-radius: 25px;
@@ -38,8 +40,8 @@
 <label for="selectNumber">Choose an instrument:</label>
 <select id="selectNumber">
     <option>select instrument address</option>
-</select>
-    <button type="button" class="btn btn-primary">Get IDN</button>
+</select><br>
+    <button type="button" class="btn btn-primary" onclick="eel.idnButton()">Get IDN</button>
 <br><br>
 <!--<div>Enter Command:</div>-->
     <form>
@@ -76,6 +78,7 @@
         }
 eel.py_random()(print_num);
 eel.sendInst()(print_num);
+
 
 </script>
 </body>
