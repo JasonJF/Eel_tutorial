@@ -21,6 +21,7 @@ def idnButton():
     print("IDN pressed")
     myInstID = wfg.query('*IDN?')
     print(myInstID)
+    eel.printResponse('\n' + myInstID)
 
 
 

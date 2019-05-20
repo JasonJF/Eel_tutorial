@@ -23,12 +23,16 @@
     box-shadow: 5px 10px 8px #888888;
     }
     #responsebox {
+    font-size: 12px;
     border: 2px solid grey;
-    background-color: #3CE88D;
+    background-color: black;
+    color: white;
+    text-align: left;
     height: 150px;
     width: 410px;
     padding: 10px;
     display: inline-block;
+    overflow: auto;
     }
 </style>
 <script src="../bootstrap.min.js"></script>
@@ -76,8 +80,14 @@
                 select.appendChild(el);
             }
         }
+eel.expose(printResponse);
+function printResponse(pyResponse) {
+  document.getElementById('responsebox').innerHTML += (pyResponse);
+  //console.log(followersSum); // you can do print followersSum wherever you want
+}
 eel.py_random()(print_num);
 eel.sendInst()(print_num);
+
 
 
 </script>
